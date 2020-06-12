@@ -1,32 +1,32 @@
-import witchPoster from "./";
-import witchHeader from "./";
+import witchPoster from "./posters/witchPoster.jpg";
+import witchHeader from "./headers/witchHeader.jpg";
 
-import littleWomenPoster from "./";
-import littleWomenHeader from "./";
+import littleWomenPoster from "./posters/littleWomenPoster.jpg";
+import littleWomenHeader from "./headers/littleWomenHeader.jpg";
 
-import ladyBirdPoster from "./";
-import ladyBirdHeader from "./";
+import ladyBirdPoster from "./posters/ladyBirdPoster.jpg";
+import ladyBirdHeader from "./headers/ladyBirdHeader.jpg";
 
-import knivesOutPoster from "./";
-import knivesOutHeader from "./";
+import knivesOutPoster from "./posters/knivesOutPoster.jpg";
+import knivesOutHeader from "./headers/knivesOutHeader.jpg";
 
-import booksmartPoster from "./";
-import booksmartHeader from "./";
+import booksmartPoster from "./posters/booksmartPoster.jpg";
+import booksmartHeader from "./headers/booksmartHeader.jpg";
 
-import columbusPoster from "./";
-import columbusHeader from "./";
+import columbusPoster from "./posters/columbusPoster.jpg";
+import columbusHeader from "./headers/columbusHeader.jpg";
 
-import arrivalPoster from "./";
-import arrivalHeader from "./";
+import arrivalPoster from "./posters/arrivalPoster.jpg";
+import arrivalHeader from "./headers/arrivalHeader.jpg";
 
-import starWarsPoster from "./";
-import starWarsHeader from "./";
+import theLastJediPoster from "./posters/theLastJediPoster.jpg";
+import theLastJediHeader from "./headers/theLastJediHeader.jpg";
 
-import interstellarPoster from "./";
-import interstellarHeader from "./";
+import interstellarPoster from "./posters/interstellarPoster.jpg";
+import interstellarHeader from "./headers/interstellarHeader.jpg";
 
-import edgeOfSeventeenPoster from "./";
-import edgeOfSeventeenHeader from "./";
+import edgeOfSeventeenPoster from "./posters/edgeOfSeventeenPoster.jpg";
+import edgeOfSeventeenHeader from "./headers/edgeOfSeventeenHeader.jpg";
 
 export const films = {
     "the-witch": {
