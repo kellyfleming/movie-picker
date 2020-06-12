@@ -28,7 +28,7 @@ import interstellarHeader from "./headers/interstellarHeader.jpg";
 import edgeOfSeventeenPoster from "./posters/edgeOfSeventeenPoster.jpg";
 import edgeOfSeventeenHeader from "./headers/edgeOfSeventeenHeader.jpg";
 
-export const films = {
+export default {
     "the-witch": {
         title: "The Witch",
         year: 2015,

@@ -7,7 +7,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-        <Dropdown />
+        <Dropdown filmData={filmData}/>
         <Switch>
             <Route>
                 {/* Film component */}
