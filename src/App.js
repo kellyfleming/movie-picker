@@ -1,4 +1,5 @@
 import React from 'react';
+import filmData from "./data";
 import './App.css';
 
 function App() {
