@@ -3,7 +3,7 @@ import {useState} from "react";
 function useToggle(initialValue = false) {
     let [state, setState] = useState(initialValue);
 
-    toggle() {
+    function toggle() {
         setState(!state);
     }
 
