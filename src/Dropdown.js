@@ -20,7 +20,7 @@ function Dropdown(props) {
     function getCurrent() {
         let path = location.pathname;
         let key = path.split("/")[1]; // either "" or path
-        if (key === "") {
+        if (key === "" || key === "about") { // fix the route so that we can handle anything, or just do De Morgan's lmao
             return (
                 <span>
                     Choose a film
