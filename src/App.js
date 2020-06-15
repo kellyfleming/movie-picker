@@ -34,8 +34,11 @@ function App() {
         <Link to="/">Home</Link>
         <Dropdown keys={keys} randomPath={randomPath} filmData={filmData}/>
         <Switch>
-            <Route>
+            <Route path="/:film">
                 {/* Film component */}
+            </Route>
+            <Route path="/:about">
+              {/* about page */}
             </Route>
         </Switch>
     </div>
