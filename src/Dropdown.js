@@ -1,5 +1,7 @@
 import React from "react";
 import {Link, useLocation} from "react-router-dom";
+import {toggleLinkContainer} from "./utility";
+import "./Dropdown.css";
 
 function Dropdown(props) {
     let {keys, filmData, randomPath} = props;
@@ -22,26 +24,26 @@ function Dropdown(props) {
             return (
                 <span>
                     Choose a film
-                    <span className="fas fa-caret-down"></span>
+                    <span id="caret" className="fas fa-caret-down"></span>
                 </span>
             );
         } else {
             return (
                 <span>
                     {filmData[key].title}
-                    <span className="fas fa-caret-down"></span>
+                    <span id="caret" className="fas fa-caret-down"></span>
                 </span>
             );
         }
     }
 
     return (
-        <div>
-            <div>
-                <button>{getCurrent()}</button>
+        <div className="Dropdown-container">
+            <div className="Button-container">
+                <button onClick={toggleLinkContainer}>{getCurrent()}</button>
                 <Link to={randomPath}>Random</Link>
             </div>
-            <ul>
+            <ul className="Link-container hidden">
                 {getLinks()}
             </ul>
         </div>
