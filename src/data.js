@@ -30,6 +30,7 @@ import edgeOfSeventeenHeader from "./headers/edgeOfSeventeenHeader.jpg";
 
 export default {
     "the-witch": {
+        path: "/the-witch",
         title: "The Witch",
         year: 2015,
         director: "Robert Eggers",
@@ -41,6 +42,7 @@ export default {
         crew: []
     },
     "little-women": {
+        path: "/little-women",
         title: "Little Women",
         year: 2019,
         director: "Greta Gerwig",
@@ -52,6 +54,7 @@ export default {
         crew: []
     },
     "lady-bird": {
+        path: "/lady-bird",
         title: "Lady Bird",
         year: 2017,
         director: "Greta Gerwig",
@@ -63,6 +66,7 @@ export default {
         crew: []
     },
     "knives-out": {
+        path: "/knives-out",
         title: "Knives Out",
         year: 2019,
         director: "Rian Johnson",
@@ -74,6 +78,7 @@ export default {
         crew: []
     },
     "booksmart": {
+        path: "/booksmart",
         title: "Booksmart",
         year: 2019,
         director: "Olivia Wilde",
@@ -85,6 +90,7 @@ export default {
         crew: []
     },
     "columbus": {
+        path: "/columbus",
         title: "Columbus",
         year: 2017,
         director: "Kogonada",
@@ -96,6 +102,7 @@ export default {
         crew: []
     },
     "arrival": {
+        path: "/arrival",
         title: "Arrival",
         year: 2016,
         director: "Denis Villeneuve",
@@ -107,6 +114,7 @@ export default {
         crew: []
     },
     "star-wars-the-last-jedi": {
+        path: "/star-wars-the-last-jedi",
         title: "Star Wars: The Last Jedi",
         year: 2017,
         director: "Rian Johnson",
@@ -118,6 +126,7 @@ export default {
         crew: []
     },
     "interstellar": {
+        path: "/interstellar",
         title: "Interstellar",
         year: 2014,
         director: "Christopher Nolan",
@@ -129,6 +138,7 @@ export default {
         crew: []
     },
     "the-edge-of-seventeen": {
+        path: "/the-edge-of-seventeen",
         title: "The Edge of Seventeen",
         year: 2016,
         director: "Kelly Fremon Craig",
