@@ -1,3 +1,18 @@
-export function getRandom(arr) {
+function getRandom(arr) {
     return arr[Math.floor(Math.random() * arr.length)];
 }
+
+function toggleLinkContainer() {
+    let $linkContainer = document.querySelector(".Link-container");
+    let $caretSpan = document.querySelector("#caret");
+    $linkContainer.classList.toggle("hidden");
+    if ($linkContainer.classList.contains("hidden")) {
+        $caretSpan.classList.remove("fa-caret-up");
+        $caretSpan.classList.add("fa-caret-down");
+    } else {
+        $caretSpan.classList.remove("fa-caret-down");
+        $caretSpan.classList.add("fa-caret-up");
+    }
+}
+
+export {getRandom, toggleLinkContainer};
