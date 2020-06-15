@@ -1,6 +1,18 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
-function Dropdown() {
+function Dropdown(props) {
+    let {keys, filmData} = props;
+    function getLinks() {
+        return keys.map(key => (
+        <li>
+            <Link to={filmData[key].path}>
+                <div>{filmData[key].title}</div>
+            </Link>
+        </li>
+        ));
+    }
+
     return (
         <div>
             <div>
@@ -8,7 +20,7 @@ function Dropdown() {
                 {/* go to random option button */}
             </div>
             <ul>
-                {/* links to options go here */}
+                {getLinks()}
             </ul>
         </div>
     );
