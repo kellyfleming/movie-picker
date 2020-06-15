@@ -1,6 +1,6 @@
 import React from "react";
 import {Link, useLocation} from "react-router-dom";
-import {toggleLinkContainer} from "./utility";
+import {toggleLinkContainer, closeLinkContainer} from "./utility";
 import "./Dropdown.css";
 
 function Dropdown(props) {
@@ -41,7 +41,7 @@ function Dropdown(props) {
         <div className="Dropdown-container">
             <div className="Button-container">
                 <button onClick={toggleLinkContainer}>{getCurrent()}</button>
-                <Link to={randomPath}>Random</Link>
+                <Link to={randomPath} onClick={closeLinkContainer}>Random</Link>
             </div>
             <ul className="Link-container hidden">
                 {getLinks()}
