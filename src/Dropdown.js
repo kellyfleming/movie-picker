@@ -2,7 +2,7 @@ import React from "react";
 import {Link, useLocation} from "react-router-dom";
 
 function Dropdown(props) {
-    let {keys, filmData} = props;
+    let {keys, filmData, randomPath} = props;
     let location = useLocation();
 
     function getLinks() {
@@ -39,7 +39,7 @@ function Dropdown(props) {
         <div>
             <div>
                 <button>{getCurrent()}</button>
-                {/* go to random option button */}
+                <Link to={randomPath}>Random</Link>
             </div>
             <ul>
                 {getLinks()}
