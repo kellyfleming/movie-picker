@@ -1,8 +1,10 @@
 import React from "react";
-import {Link} from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 
 function Dropdown(props) {
     let {keys, filmData} = props;
+    let location = useLocation();
+
     function getLinks() {
         return keys.map(key => (
         <li>
@@ -13,10 +15,30 @@ function Dropdown(props) {
         ));
     }
 
+    function getCurrent() {
+        let path = location.pathname;
+        let key = path.split("/")[1]; // either "" or path
+        if (key === "") {
+            return (
+                <span>
+                    Choose a film
+                    <span className="fas fa-caret-down"></span>
+                </span>
+            );
+        } else {
+            return (
+                <span>
+                    {filmData[key].title}
+                    <span className="fas fa-caret-down"></span>
+                </span>
+            );
+        }
+    }
+
     return (
         <div>
             <div>
-                {/* dropdown toggle button */}
+                <button>{getCurrent()}</button>
                 {/* go to random option button */}
             </div>
             <ul>
