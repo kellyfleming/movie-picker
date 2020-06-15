@@ -15,4 +15,12 @@ function toggleLinkContainer() {
     }
 }
 
-export {getRandom, toggleLinkContainer};
+function closeLinkContainer() {
+    let $linkContainer = document.querySelector(".Link-container");
+    let $caretSpan = document.querySelector("#caret");
+    $linkContainer.classList.add("hidden");
+    $caretSpan.classList.remove("fa-caret-up");
+    $caretSpan.classList.add("fa-caret-down");
+}
+
+export {getRandom, toggleLinkContainer, closeLinkContainer};
