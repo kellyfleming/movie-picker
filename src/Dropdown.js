@@ -10,7 +10,7 @@ function Dropdown(props) {
     function getLinks() {
         return keys.map(key => (
         <li>
-            <Link to={filmData[key].path}>
+            <Link to={filmData[key].path} onClick={toggleLinkContainer}>
                 <div>{filmData[key].title}</div>
             </Link>
         </li>
