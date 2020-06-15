@@ -2,6 +2,7 @@ import React, {useState, useCallback, useEffect} from 'react';
 import {Switch, Route, Link, useLocation} from "react-router-dom";
 import {getRandom} from "./utility";
 import Dropdown from "./Dropdown";
+import About from "./About";
 import filmData from "./data";
 import './App.css';
 
@@ -32,14 +33,16 @@ function App() {
   return (
     <div className="App">
         <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
         <Dropdown keys={keys} randomPath={randomPath} filmData={filmData}/>
         <Switch>
+            <Route path="/about">
+              <About />
+            </Route>
             <Route path="/:film">
                 {/* Film component */}
             </Route>
-            <Route path="/:about">
-              {/* about page */}
-            </Route>
+            
         </Switch>
     </div>
   );
