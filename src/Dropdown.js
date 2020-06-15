@@ -2,7 +2,15 @@ import React from "react";
 
 function Dropdown() {
     return (
-        <span></span>
+        <div>
+            <div>
+                {/* dropdown toggle button */}
+                {/* go to random option button */}
+            </div>
+            <ul>
+                {/* links to options go here */}
+            </ul>
+        </div>
     );
 }
 
