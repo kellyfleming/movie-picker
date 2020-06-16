@@ -3,6 +3,7 @@ import {Switch, Route, Link, useLocation} from "react-router-dom";
 import {getRandom} from "./utility";
 import Dropdown from "./Dropdown";
 import About from "./About";
+import Film from "./Film";
 import filmData from "./data";
 import './App.css';
 
@@ -40,7 +41,7 @@ function App() {
               <About />
             </Route>
             <Route path="/:film">
-                {/* Film component */}
+                <Film />
             </Route>
             
         </Switch>
