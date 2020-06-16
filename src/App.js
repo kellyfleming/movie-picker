@@ -35,15 +35,20 @@ function App() {
     <div className="App">
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
-        <Dropdown keys={keys} randomPath={randomPath} filmData={filmData}/>
+        {/* header image and gradient mask */}
+        <header>
+          <div>
+            {/* this is the gradient mask that sits behind the navbar and on the top of the header image */}
+            <Dropdown keys={keys} randomPath={randomPath} filmData={filmData}/>
+          </div>
+        </header>
         <Switch>
             <Route path="/about">
               <About />
             </Route>
-            <Route path="/:film">
+            <Route path="/:film" filmData={filmData}>
                 <Film />
             </Route>
-            
         </Switch>
     </div>
   );
