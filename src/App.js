@@ -46,7 +46,7 @@ function App() {
             <Route path="/about">
               <About />
             </Route>
-            <Route path="/:film" filmData={filmData}>
+            <Route path="/:film">
                 <Film />
             </Route>
         </Switch>
