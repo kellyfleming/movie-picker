@@ -1,6 +1,7 @@
 import React, {useState, useCallback, useEffect} from 'react';
 import {Switch, Route, Link, useLocation} from "react-router-dom";
 import {getRandom} from "./utility";
+import HeaderImage from "./HeaderImage";
 import Dropdown from "./Dropdown";
 import About from "./About";
 import Film from "./Film";
@@ -36,6 +37,7 @@ function App() {
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
         {/* header image and gradient mask */}
+        <HeaderImage />
         <header>
           <div>
             {/* this is the gradient mask that sits behind the navbar and on the top of the header image */}
