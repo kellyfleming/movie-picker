@@ -7,7 +7,9 @@ function Navbar(props) {
     return (
         <header className="Navbar-wrapper">
             <div className="Navbar-background">
-                <Dropdown keys={Object.keys(filmData)} randomPath={props.randomPath} filmData={filmData}/>
+                <div className="Navbar-container">
+                    <Dropdown keys={Object.keys(filmData)} randomPath={props.randomPath} filmData={filmData}/>
+                </div>
             </div>
         </header>
     );
