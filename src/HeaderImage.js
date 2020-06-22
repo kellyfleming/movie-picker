@@ -7,7 +7,7 @@ function HeaderImage() {
     let location = useLocation();
     let key = location.pathname.split("/")[1];
     let headerSrc = "";
-    if (key) {
+    if (key && Object.keys(filmData).includes(key)) {
         headerSrc = filmData[key].headerSrc;
     }
     return (
