@@ -11,12 +11,23 @@ function HeaderImage() {
         headerSrc = filmData[key].headerSrc;
     }
     return (
-        <div className="Header-container">
-            <div id="header">
-                {headerSrc && <div className="Header-image" style={{backgroundImage: `url(${headerSrc})`}}></div>}
+
+        <span>
+            {headerSrc &&
+            <div className="Header-container">
+                <div id="header">
+                    <div className="Header-image" style={{backgroundImage: `url(${headerSrc})`}}></div>
+                </div>
+                <div className="Header-mask"></div>
             </div>
-            <div className="Header-mask"></div>
-        </div>
+            }
+        </span>
+        // <div className="Header-container">
+        //     <div id="header">
+        //         {headerSrc && <div className="Header-image" style={{backgroundImage: `url(${headerSrc})`}}></div>}
+        //     </div>
+        //     <div className="Header-mask"></div>
+        // </div>
     );
 }
 
