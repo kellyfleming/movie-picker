@@ -1,5 +1,5 @@
 import React from "react";
-import {Switch, Route, useRouteMatch, useParams} from "react-router-dom";
+import {Switch, Route, NavLink, useRouteMatch, useParams} from "react-router-dom";
 import filmData from "./data";
 import "./Film.css";
 
@@ -32,7 +32,18 @@ function Film(props) {
                                 </p>
                             </div>
                             <div className="Content-tabs">
-
+                                <ul>
+                                    <li><NavLink exact to={`${match.url}`}>Cast</NavLink></li>
+                                    <li><NavLink exact to={`${match.url}/crew`}>Crew</NavLink></li>
+                                </ul>
+                                <Switch>
+                                    <Route path={`${match.path}/crew`}>
+                                        crew, non-default tab
+                                    </Route>
+                                    <Route path={match.path}>
+                                        cast, default tab
+                                    </Route>
+                                </Switch>
                             </div>
                         </div>
                         <div className="Content-right">
