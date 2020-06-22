@@ -36,12 +36,6 @@ function App() {
         {/* header image and gradient mask */}
         <HeaderImage />
         <Navbar randomPath={randomPath}/>
-        <header>
-          <div>
-            {/* this is the gradient mask that sits behind the navbar and on the top of the header image */}
-            {/* <Dropdown keys={keys} randomPath={randomPath} filmData={filmData}/> */}
-          </div>
-        </header>
         <Switch>
             <Route path="/about">
               <About />
