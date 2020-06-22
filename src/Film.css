@@ -1,0 +1,84 @@
+.Main-wrapper {
+    padding-top: 400px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    color: honeydew;
+}
+
+.Main-container {
+    display: flex;
+    width: 65%;
+}
+
+.Main-sidebar {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.Sidebar-poster {
+    height: 300px;
+    width: 200px;
+    background-repeat: no-repeat;
+    border: 1px solid silver;
+    border-radius: 2%;
+    position: sticky;
+    top: 5rem;
+}
+
+.Main-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.Content-wrapper {
+    display: flex;
+}
+
+.Content-interaction-wrapper {
+    width: 100%;
+    height: 150px;
+    background-color: hotpink;
+    display: flex;
+    flex-direction: column;
+    margin-top: 8rem;
+}
+
+.Description-tagline {
+    text-transform: uppercase;
+}
+
+.Content-interaction-toggles {
+    display: flex;
+    height: 50%;
+}
+
+.Content-interaction-rating {
+
+}
+
+.Content-left {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2rem;
+}
+
+.Content-right {
+    width: 50%;
+}
+
+.Content-tabs {
+    height: 300px;
+    width: 300px;
+}
+
+.Content-title h1 {
+    font-family: serif;
+    display: inline;
+    margin: 1.5rem;
+}
+
+.Content-title span {
+    margin-right: 1rem;
+}
