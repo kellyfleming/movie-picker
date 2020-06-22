@@ -1,6 +1,7 @@
 import React from "react";
 import {Switch, Route, useRouteMatch, useParams} from "react-router-dom";
 import filmData from "./data";
+import "./Film.css";
 
 function Film(props) {
     let match = useRouteMatch();
@@ -11,14 +12,14 @@ function Film(props) {
         <main className="Main-wrapper">
             <div className="Main-container">
                 <div className="Main-sidebar">
-                    <div className="Sidebar-poster" style={{backgroundImage: `url(${posterSrc})`, height: "300px", width: "200px"}}>
+                    <div className="Sidebar-poster" style={{backgroundImage: `url(${posterSrc})`}}>
                     </div>
                 </div>
                 <div className="Main-content">
                     <div className="Content-title">
-                        {title}
-                        {year}
-                        Directed by {director}
+                        <h1>{title}</h1>
+                        <span>{year}</span>
+                        Directed by <span>{director}</span>
                     </div>
                     <div className="Content-wrapper">
                         <div className="Content-left">
@@ -40,7 +41,7 @@ function Film(props) {
 
                                 </div>
                                 <div className="Content-interaction-rating">
-                                    
+
                                 </div>
                             </div>
                         </div>
