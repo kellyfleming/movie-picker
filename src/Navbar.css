@@ -1,7 +1,15 @@
 .Navbar-wrapper {
-    display: flex;
     height: 75px;
     position: relative;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.Navbar-container {
+    display: flex;
+    height: inherit;
+    justify-content: center;
+    width: 100%;
 }
 
 .Navbar-background {
