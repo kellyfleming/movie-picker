@@ -11,7 +11,7 @@
 
 .Main-container {
     display: flex;
-    width: 75%;
+    width: 80%;
     justify-content: center;
 }
 
@@ -55,6 +55,7 @@
 .Content-interaction-toggles {
     display: flex;
     height: 50%;
+    background-color: pink;
 }
 
 .Content-interaction-rating {
@@ -65,10 +66,12 @@
     display: flex;
     flex-direction: column;
     margin-left: 2rem;
+    width: 75%;
 }
 
 .Content-right {
-    width: 50%;
+    width: 25%;
+    background-color: fuchsia;
 }
 
 .Content-tabs {
@@ -100,7 +103,7 @@
 
 .Active-tab {
     background-color: rgba(67, 69, 71, 0.75);
-    box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.20);
+    box-shadow: 0px 3px 3px rgba(255, 255, 255, 0.20);
 }
 
 .Content-title h1 {
