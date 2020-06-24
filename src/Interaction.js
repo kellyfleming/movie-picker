@@ -23,7 +23,7 @@ function Interaction(props) {
                     <span className="labelText">{isLiked ? "Liked" : "Like?"}</span>
                 </div>
             </div>
-            <StarRating />
+            <StarRating savedValue={rating} setRating={setRating}/>
         </div>
     );
 }
