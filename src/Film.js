@@ -1,6 +1,7 @@
 import React from "react";
 import {Switch, Route, NavLink, useRouteMatch, useParams} from "react-router-dom";
 import Tab from "./Tab";
+import Interaction from "./Interaction";
 import filmData from "./data";
 import "./Film.css";
 
@@ -8,6 +9,8 @@ function Film(props) {
     let match = useRouteMatch();
     let params = useParams();
     let key = params.film;
+    let likedKey = `${key}-liked`;
+    let watchedKey = `${key}-watched`;
     let {title, year, director, posterSrc, synopsis, tagline} = filmData[key];
     return (
         <main className="Main-wrapper">
@@ -48,14 +51,7 @@ function Film(props) {
                             </div>
                         </div>
                         <div className="Content-right">
-                            <div className="Content-interaction-wrapper">
-                                <div className="Content-interaction-toggles">
-
-                                </div>
-                                <div className="Content-interaction-rating">
-
-                                </div>
-                            </div>
+                            <Interaction />
                         </div>
                     </div>
                 </div>
