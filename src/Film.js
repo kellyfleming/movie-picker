@@ -11,6 +11,7 @@ function Film(props) {
     let key = params.film;
     let likedKey = `${key}-liked`;
     let watchedKey = `${key}-watched`;
+    let ratingKey = `${key}-rating`;
     let {title, year, director, posterSrc, synopsis, tagline} = filmData[key];
     return (
         <main className="Main-wrapper">
@@ -51,7 +52,7 @@ function Film(props) {
                             </div>
                         </div>
                         <div className="Content-right">
-                            <Interaction />
+                            <Interaction keys={{likedKey, watchedKey, ratingKey}}/>
                         </div>
                     </div>
                 </div>
