@@ -1,0 +1,52 @@
+.Interaction-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.Interaction-toggles {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: xx-large;
+}
+
+.labelText {
+    font-size: medium;
+}
+
+.Interaction-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.seen {
+    color: cyan;
+}
+
+.notSeen {
+    color: darkcyan;
+}
+
+.notSeen:hover {
+    color: cyan;
+}
+
+.seen:hover {
+    color: darkcyan;
+}
+
+.liked {
+    color: crimson;
+}
+
+.unliked {
+    color: rgb(140, 15, 40);
+}
+
+.unliked:hover {
+    color: crimson;
+}
+
+.liked:hover {
+    color: rgb(140, 15, 40);
+}
