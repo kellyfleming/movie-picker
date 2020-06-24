@@ -1,4 +1,5 @@
 import React from "react";
+import StarRating from "./StarRating";
 import "./Interaction.css";
 import useLocalStorageToggle from "./hooks/useLocalStorageToggle";
 import useLocalStorageState from "./hooks/useLocalStorageState";
@@ -22,6 +23,7 @@ function Interaction(props) {
                     <span className="labelText">{isLiked ? "Liked" : "Like?"}</span>
                 </div>
             </div>
+            <StarRating />
         </div>
     );
 }
