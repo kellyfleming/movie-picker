@@ -1,11 +1,18 @@
 import React from "react";
 import {ReactComponent as Solid} from "./solid.svg";
 import {ReactComponent as Outline} from "./outline.svg";
+import "./StarHalf.css";
 
 function StarHalf(props) {
+    function handleClick() {
+        console.log("clicked");
+        let val = props.hIndex === 0 ? 0.5 : 1;
+        props.updateSavedStars(val, props.parentIndex);
+    }
+    let classes = props.isFlipped ? "StarHalf-flipped" : "";
     return (
-        <span>
-            {props.isFilled ? <Solid /> : <Outline />}
+        <span className="StarHalf">
+            {props.isFilled ? <Solid className={classes} onClick={handleClick}/> : <Outline className={classes} onClick={handleClick}/>}
         </span>
     )
 }
