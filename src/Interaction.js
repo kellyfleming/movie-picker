@@ -11,6 +11,7 @@ function Interaction(props) {
     let [rating, setRating] = useLocalStorageState(ratingKey, 0);
     let likeToggleClasses = `${isLiked ? "liked fas" : "unliked far"} fa-heart`;
     let seenToggleClasses = `${hasSeen ? "seen fas" : "notSeen far"} fa-eye`;
+
     return (
         <div className="Interaction-wrapper">
             <div className="Interaction-toggles">
