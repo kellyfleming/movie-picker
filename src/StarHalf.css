@@ -1,0 +1,8 @@
+.StarHalf svg {
+    width: 1rem;
+    fill: darkorange;
+}
+
+.StarHalf-flipped {
+    transform: scaleX(-1);
+}
