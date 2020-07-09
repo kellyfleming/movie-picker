@@ -23,4 +23,12 @@ function closeLinkContainer() {
     $caretSpan.classList.add("fa-caret-down");
 }
 
-export {getRandom, toggleLinkContainer, closeLinkContainer};
+function getLocal(key) {
+    return window.localStorage.getItem(key);
+}
+
+function setLocal(key, val) {
+    window.localStorage.setItem(key, val);
+}
+
+export {getRandom, toggleLinkContainer, closeLinkContainer, getLocal, setLocal};
