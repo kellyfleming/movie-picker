@@ -71,7 +71,11 @@
 
 .Content-right {
     width: 25%;
-    background-color: rgba(255, 0, 255, 0.10);
+    background-color: rgba(67, 69, 71, 0.2);
+    border-radius: 0.25rem;
+    display: flex;
+    flex-direction: column;
+    height: 50%;
 }
 
 .Content-tabs {
