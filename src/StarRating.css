@@ -1,0 +1,15 @@
+.StarRating-clear {
+    font-size: 1.5rem;
+    color: rgb(175, 0, 0);
+    margin-right: 0.25rem;
+}
+
+.StarRating-clear:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.StarRating-container {
+    display: flex;
+    justify-content: center;
+}
