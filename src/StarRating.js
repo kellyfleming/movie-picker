@@ -73,6 +73,8 @@ function StarRating(props) {
                 value={val}
                 key={index}
                 updateSavedStars={updateSavedStars}
+                updateHoverStars={updateHoverStars}
+                isHovering={isHovering}
              />
         ));
     }
