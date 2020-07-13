@@ -52,12 +52,12 @@ function Film(props) {
                                     </Route>
                                 </Switch>
                             </div>
+                            <Review reviewKey={reviewKey}/>
                         </div>
                         <div className="Content-right">
                             <Interaction keys={{likedKey, watchedKey, ratingKey}}/>
                         </div>
                     </div>
-                    <Review reviewKey={reviewKey}/>
                 </div>
             </div>
         </main>
