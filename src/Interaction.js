@@ -44,6 +44,11 @@ function Interaction(props) {
         setRating(val);
     }
 
+    function clearSavedRating() {
+        setLocal(ratingKey, 0);
+        setRating(0);
+    }
+
     return (
         <div className="Interaction-wrapper">
             <div className="Interaction-toggles">
@@ -56,7 +61,7 @@ function Interaction(props) {
                     <span className="labelText">{JSON.parse(getLocal(likedKey)) ? "Liked" : "Like?"}</span>
                 </div>
             </div>
-            <StarRating savedValue={JSON.parse(getLocal(ratingKey))} setSavedRating={setSavedRating} />
+            <StarRating savedValue={JSON.parse(getLocal(ratingKey))} setSavedRating={setSavedRating} clearSavedRating={clearSavedRating}/>
         </div>
     );
 }
