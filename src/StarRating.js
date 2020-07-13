@@ -1,6 +1,7 @@
 import React, {useState, useEffect, useCallback} from "react";
 import Star from "./Star";
 import useToggle from "./hooks/useToggle";
+import "./StarRating.css";
 
 function StarRating(props) {
     let numStars = 5;
@@ -60,8 +61,8 @@ function StarRating(props) {
     }
 
     return (
-        <div>
-            <span>
+        <div className="StarRating-container">
+            <span className="StarRating-clear">
                 <span className="fas fa-ban"></span>
             </span>
             <div>
