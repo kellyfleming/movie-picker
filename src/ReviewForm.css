@@ -1,0 +1,10 @@
+textarea {
+    width: 100%;
+    height: 10rem;
+    box-sizing: border-box;
+    resize: none;
+    background-color: rgba(67, 69, 71, 0.2);
+    color: honeydew;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
