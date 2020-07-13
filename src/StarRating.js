@@ -34,7 +34,6 @@ function StarRating(props) {
     let [isHovering, toggleIsHovering] = useToggle(false);
 
     function updateSavedStars(starValue, starIndex) {
-        console.log(starValue, starIndex);
         let updatedStars = savedStars.map((val, index) => {
             if (index < starIndex) {
                 return 1;
