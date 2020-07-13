@@ -48,6 +48,19 @@ function StarRating(props) {
         props.setSavedRating(total);
     }
 
+    function updateHoverStars(starValue, starIndex) {
+        let updatedStars = hoverStars.map((val, index) => {
+            if (index < starIndex) {
+                return 1;
+            } else if (index === starIndex) {
+                return starValue;
+            } else {
+                return 0;
+            }
+        });
+        setHoverStars(updatedStars);
+    }
+
     function generateSVGArray(arr) {
         return arr.map((val, index) => (
             <Star
