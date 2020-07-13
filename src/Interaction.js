@@ -47,7 +47,7 @@ function Interaction(props) {
     return (
         <div className="Interaction-wrapper">
             <div className="Interaction-toggles">
-                <div className="Interaction-icon" onClick={() => toggle(watchedKey, setHasSeen)}>
+                <div className="Interaction-icon iconBorder" onClick={() => toggle(watchedKey, setHasSeen)}>
                     <span id="eye" className={seenToggleClasses}></span>
                     <span className="labelText">{JSON.parse(getLocal(watchedKey)) ? "Seen" : "Seen?"}</span>
                 </div>
