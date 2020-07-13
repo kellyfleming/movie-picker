@@ -2,6 +2,7 @@ import React from "react";
 import {Switch, Route, NavLink, useRouteMatch, useParams} from "react-router-dom";
 import Tab from "./Tab";
 import Interaction from "./Interaction";
+import Review from "./Review";
 import filmData from "./data";
 import "./Film.css";
 
@@ -12,6 +13,7 @@ function Film(props) {
     let likedKey = `${key}-liked`;
     let watchedKey = `${key}-watched`;
     let ratingKey = `${key}-rating`;
+    let reviewKey = `${key}-review`;
     let {title, year, director, posterSrc, synopsis, tagline} = filmData[key];
     return (
         <main className="Main-wrapper">
@@ -55,6 +57,7 @@ function Film(props) {
                             <Interaction keys={{likedKey, watchedKey, ratingKey}}/>
                         </div>
                     </div>
+                    <Review reviewKey={reviewKey}/>
                 </div>
             </div>
         </main>
