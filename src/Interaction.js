@@ -40,6 +40,9 @@ function Interaction(props) {
     }
 
     function setSavedRating(val) {
+        if (!hasSeen) {
+            toggle(watchedKey, setHasSeen);
+        }
         setLocal(ratingKey, val);
         setRating(val);
     }
