@@ -1,8 +1,12 @@
 .StarHalf svg {
-    width: 1rem;
+    width: 0.85rem;
     fill: darkorange;
 }
 
 .StarHalf-flipped {
     transform: scaleX(-1);
+}
+
+.StarHalf:hover {
+    cursor: pointer;
 }
