@@ -5,10 +5,10 @@ import "./StarHalf.css";
 
 function StarHalf(props) {
     function handleClick() {
-        console.log("clicked");
         let val = props.halfIndex === 0 ? 0.5 : 1;
         props.updateSavedStars(val, props.parentIndex);
     }
+
     let classes = props.isFlipped ? "StarHalf-flipped" : "";
     return (
         <span className="StarHalf">
