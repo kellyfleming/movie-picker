@@ -62,7 +62,7 @@ function StarRating(props) {
 
     return (
         <div className="StarRating-container">
-            <span className="StarRating-clear">
+            <span className="StarRating-clear" onClick={props.clearSavedRating}>
                 <span className="fas fa-ban"></span>
             </span>
             <div>
