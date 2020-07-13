@@ -1,5 +1,5 @@
 import React, {useState, useCallback, useEffect} from 'react';
-import {Switch, Route, useLocation} from "react-router-dom";
+import {Switch, Route, useLocation, Redirect} from "react-router-dom";
 import {getRandom} from "./utility";
 import HeaderImage from "./HeaderImage";
 import Navbar from "./Navbar";
@@ -37,6 +37,9 @@ function App() {
         <HeaderImage />
         <Navbar randomPath={randomPath}/>
         <Switch>
+            <Route exact path="/">
+              <Redirect to="/about" />
+            </Route>
             <Route path="/about">
               <About />
             </Route>
