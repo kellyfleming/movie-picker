@@ -39,10 +39,31 @@ function Interaction(props) {
         }
     }
 
-    function setSavedRating(val) {
+    function handleLike() {
         if (!hasSeen) {
             toggle(watchedKey, setHasSeen);
         }
+        toggle(likedKey, setIsLiked);
+    }
+
+    function handleSeen() {
+        if (isLiked) {
+            toggle(likedKey, setIsLiked);
+        }
+        if (rating !== 0 || rating !== null) {
+            clearSavedRating();
+        }
+        toggle(watchedKey, setHasSeen);
+    }
+
+    function handleRating(val) {
+        if (!hasSeen) {
+            toggle(watchedKey, setHasSeen);
+        }
+        setSavedRating(val);
+    }
+
+    function setSavedRating(val) {
         setLocal(ratingKey, val);
         setRating(val);
     }
@@ -55,16 +76,16 @@ function Interaction(props) {
     return (
         <div className="Interaction-wrapper">
             <div className="Interaction-toggles">
-                <div className="Interaction-icon iconBorder" onClick={() => toggle(watchedKey, setHasSeen)}>
+                <div className="Interaction-icon iconBorder" onClick={handleSeen}>
                     <span id="eye" className={seenToggleClasses}></span>
                     <span className="labelText">{JSON.parse(getLocal(watchedKey)) ? "Seen" : "Seen?"}</span>
                 </div>
-                <div className="Interaction-icon" onClick={() => toggle(likedKey, setIsLiked)}>
+                <div className="Interaction-icon" onClick={handleLike}>
                     <span id="heart" className={likeToggleClasses}></span>
                     <span className="labelText">{JSON.parse(getLocal(likedKey)) ? "Liked" : "Like?"}</span>
                 </div>
             </div>
-            <StarRating savedValue={JSON.parse(getLocal(ratingKey))} setSavedRating={setSavedRating} clearSavedRating={clearSavedRating}/>
+            <StarRating savedValue={JSON.parse(getLocal(ratingKey))} handleRating={handleRating} clearSavedRating={clearSavedRating}/>
         </div>
     );
 }
