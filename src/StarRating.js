@@ -85,7 +85,7 @@ function StarRating(props) {
                 <span className="fas fa-ban"></span>
             </span>
             <div onMouseEnter={toggleIsHovering} onMouseLeave={clearHoverStars}>
-                {generateSVGArray(savedStars)}
+                {isHovering ? generateSVGArray(hoverStars) : generateSVGArray(savedStars)}
             </div>
         </div>
     );
