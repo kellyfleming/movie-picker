@@ -84,7 +84,7 @@ function StarRating(props) {
             <span className="StarRating-clear" onClick={props.clearSavedRating}>
                 <span className="fas fa-ban"></span>
             </span>
-            <div>
+            <div onMouseEnter={toggleIsHovering}>
                 {generateSVGArray(savedStars)}
             </div>
         </div>
