@@ -61,6 +61,11 @@ function StarRating(props) {
         setHoverStars(updatedStars);
     }
 
+    function clearHoverStars() {
+        setHoverStars(Array(numStars).fill(0));
+        toggleIsHovering();
+    }
+
     function generateSVGArray(arr) {
         return arr.map((val, index) => (
             <Star
