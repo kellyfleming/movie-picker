@@ -45,7 +45,7 @@ function StarRating(props) {
         });
         let total = updatedStars.reduce((t, star) => t + star, 0);
         setSavedStars(updatedStars);
-        props.setSavedRating(total);
+        props.handleRating(total);
     }
 
     function updateHoverStars(starValue, starIndex) {
