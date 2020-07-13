@@ -1,12 +1,16 @@
 .Interaction-wrapper {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
 }
 
 .Interaction-toggles {
     display: flex;
     justify-content: space-evenly;
     font-size: xx-large;
+    padding-bottom: 1rem;
+    border-bottom: solid 1px rgb(102, 104, 107);
 }
 
 .labelText {
@@ -29,10 +33,12 @@
 
 .notSeen:hover {
     color: cyan;
+    cursor: pointer;
 }
 
 .seen:hover {
     color: darkcyan;
+    cursor: pointer;
 }
 
 .liked {
@@ -45,8 +51,10 @@
 
 .unliked:hover {
     color: crimson;
+    cursor: pointer;
 }
 
 .liked:hover {
     color: rgb(140, 15, 40);
+    cursor: pointer;
 }
