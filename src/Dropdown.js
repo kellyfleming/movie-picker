@@ -1,6 +1,7 @@
 import React from "react";
 import {Link, useLocation} from "react-router-dom";
 import {toggleLinkContainer, closeLinkContainer} from "./utility";
+import {v4 as uuidv4} from "uuid";
 import "./Dropdown.css";
 
 function Dropdown(props) {
@@ -9,7 +10,7 @@ function Dropdown(props) {
 
     function getLinks() {
         return keys.map(key => (
-        <li>
+        <li key={uuidv4()}>
             <Link to={filmData[key].path} onClick={toggleLinkContainer}>
                 <div>{filmData[key].title}</div>
             </Link>
