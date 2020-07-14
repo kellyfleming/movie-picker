@@ -1,22 +1,12 @@
 .Tooltip-container {
     position: relative;
     display: inline-block;
-    width: 150px;
     border-radius: 0.5rem;
     text-align: center;
     font-size: smaller;
-    margin: 0.25rem 0.25rem;
-}
-
-.Tooltip-container .Tooltip-text {
-    display: none;
-    position: absolute;
-    background-color: lavender;
-    text-align: center;
-    left: 50%;
-    bottom: 100%;
-    margin-left: -60%;
-    z-index: 1;
+    margin: 0.15rem 0.15rem;
+    height: 25px;
+    text-decoration: underline solid rgb(102, 104, 107);
 }
 
 .Tooltip-container:hover {
@@ -27,6 +17,10 @@
 
 .Data {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    align-items: center;
     flex-wrap: wrap;
+    height: 250px;
+    width: 75%;
+    margin: 0 auto;
 }

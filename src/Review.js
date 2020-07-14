@@ -36,14 +36,16 @@ function Review(props) {
             } else {
                 return (
                     <>
-                        <p>{reviewText}</p>
-                        <button onClick={toggleIsEditing}>Edit Review</button>
-                        <button onClick={deleteSavedReview}>Delete Review</button>
+                        <div className="Review-text">{reviewText}</div>
+                        <div className="Review-button-container">
+                            <button onClick={toggleIsEditing}>Edit Review</button>
+                            <button onClick={deleteSavedReview}>Delete Review</button>
+                        </div>
                     </>
                 );
             }
         } else {
-            return <ReviewForm toggleIsEditing={toggleIsEditing} reviewText={reviewText} saveReview={saveReview}/>;
+            return <ReviewForm toggleIsEditing={toggleIsEditing} reviewText={reviewText} saveReview={saveReview} />;
         }
     }
 

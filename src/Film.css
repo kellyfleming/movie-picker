@@ -40,38 +40,39 @@
     display: flex;
 }
 
-.Content-interaction-wrapper {
+/* .Content-interaction-wrapper {
     width: 100%;
     height: 150px;
     display: flex;
     flex-direction: column;
     margin-top: 8rem;
-}
+} */
 
 .Description-tagline {
     text-transform: uppercase;
 }
 
-.Content-interaction-toggles {
+/* .Content-interaction-toggles {
     display: flex;
     height: 50%;
     background-color: pink;
-}
+} */
 
 .Content-left {
     display: flex;
     flex-direction: column;
     margin-left: 2rem;
+    margin-right: 2rem;
     width: 75%;
 }
 
 .Content-right {
-    width: 25%;
+    width: 200px;
     background-color: rgba(67, 69, 71, 0.2);
     border-radius: 0.25rem;
     display: flex;
     flex-direction: column;
-    height: 50%;
+    height: 150px;
 }
 
 .Content-tabs {
@@ -114,4 +115,8 @@
 
 .Content-title span {
     margin-right: 1rem;
+}
+
+.Content-title {
+    margin-bottom: 0.5rem;
 }

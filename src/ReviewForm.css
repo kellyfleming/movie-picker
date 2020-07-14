@@ -8,3 +8,13 @@ textarea {
     border-radius: 0.5rem;
     padding: 1rem;
 }
+
+form {
+    width: 100%;
+}
+
+.Review-form-buttons {
+    display: flex;
+    width: inherit;
+    justify-content: space-around;
+}
