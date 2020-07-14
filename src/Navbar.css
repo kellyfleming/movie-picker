@@ -1,6 +1,7 @@
 .Navbar-wrapper {
     height: 75px;
-    position: relative;
+    position: sticky;
+    top: 0;
     width: 1200px;
     margin: 0 auto;
     z-index: 5;
