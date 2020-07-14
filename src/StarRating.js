@@ -1,6 +1,5 @@
 import React, {useState, useEffect, useCallback} from "react";
 import Star from "./Star";
-import useToggle from "./hooks/useToggle";
 import "./StarRating.css";
 
 function StarRating(props) {
@@ -31,7 +30,7 @@ function StarRating(props) {
 
     let [savedStars, setSavedStars] = useState(generateStars(props.savedValue));
     let [hoverStars, setHoverStars] = useState(Array(numStars).fill(0));
-    let [isHovering, toggleIsHovering] = useToggle(false);
+    let [isHovering, setIsHovering] = useState(false);
 
     function updateSavedStars(starValue, starIndex) {
         let updatedStars = savedStars.map((val, index) => {
@@ -63,7 +62,11 @@ function StarRating(props) {
 
     function clearHoverStars() {
         setHoverStars(Array(numStars).fill(0));
-        toggleIsHovering();
+        setIsHovering(false);
+    }
+
+    function handleEnter() {
+        setIsHovering(true);
     }
 
     function generateSVGArray(arr) {
@@ -84,7 +87,7 @@ function StarRating(props) {
             <span className="StarRating-clear" onClick={props.clearSavedRating}>
                 <span className="fas fa-ban"></span>
             </span>
-            <div onMouseEnter={toggleIsHovering} onMouseLeave={clearHoverStars}>
+            <div className="StarRating-control" onMouseEnter={handleEnter} onMouseLeave={clearHoverStars}>
                 {isHovering ? generateSVGArray(hoverStars) : generateSVGArray(savedStars)}
             </div>
         </div>
