@@ -1,26 +1,18 @@
-.Tooltip-container {
-    position: relative;
-    display: inline-block;
-    border-radius: 0.5rem;
+.Content-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(40px, auto);
+}
+
+.Content-grid > .Content-item {
+    font-size: small;
     text-align: center;
-    font-size: smaller;
-    margin: 0.15rem 0.15rem;
-    height: 25px;
+    padding-top: 0.5rem;
     text-decoration: underline solid rgb(102, 104, 107);
 }
 
-.Tooltip-container:hover {
-    background-color: rgba(67, 69, 71, 0.50);
-    box-shadow: 0px 3px 3px rgba(255, 255, 255, 0.20);
+.Content-item:hover {
+    background-color: rgba(255, 255, 255, 0.05);
     cursor: pointer;
 }
 
-.Data {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    height: 250px;
-    width: 75%;
-    margin: 0 auto;
-}
