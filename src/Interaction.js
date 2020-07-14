@@ -19,17 +19,17 @@ function Interaction(props) {
     }
     
     let [isLiked, setIsLiked] = useState(JSON.parse(getLocal(likedKey)));
-    let [hasSeen, setHasSeen] = useState(JSON.parse(getLocal(watchedKey)));
+    let [hasWatched, sethasWatched] = useState(JSON.parse(getLocal(watchedKey)));
     let [rating, setRating] = useState(JSON.parse(getLocal(ratingKey)));
 
     useEffect(() => {
         setIsLiked(JSON.parse(getLocal(likedKey)));
-        setHasSeen(JSON.parse(getLocal(watchedKey)));
+        sethasWatched(JSON.parse(getLocal(watchedKey)));
         setRating(JSON.parse(getLocal(ratingKey)));
     }, [likedKey, watchedKey, ratingKey]);
 
     let likeToggleClasses = `${isLiked ? "liked fas" : "unliked far"} fa-heart`;
-    let seenToggleClasses = `${hasSeen ? "seen fas" : "notSeen far"} fa-eye`;
+    let seenToggleClasses = `${hasWatched ? "seen fas" : "notSeen far"} fa-eye`;
 
     function toggle(key, setter) {
         let current = JSON.parse(getLocal(key));
@@ -40,8 +40,8 @@ function Interaction(props) {
     }
 
     function handleLike() {
-        if (!hasSeen) {
-            toggle(watchedKey, setHasSeen);
+        if (!hasWatched) {
+            toggle(watchedKey, sethasWatched);
         }
         toggle(likedKey, setIsLiked);
     }
@@ -53,12 +53,12 @@ function Interaction(props) {
         if (rating !== 0 || rating !== null) {
             clearSavedRating();
         }
-        toggle(watchedKey, setHasSeen);
+        toggle(watchedKey, sethasWatched);
     }
 
     function handleRating(val) {
-        if (!hasSeen) {
-            toggle(watchedKey, setHasSeen);
+        if (!hasWatched) {
+            toggle(watchedKey, sethasWatched);
         }
         setSavedRating(val);
     }
