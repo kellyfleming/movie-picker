@@ -1,5 +1,6 @@
 import React from "react";
 import useToggle from "./hooks/useToggle";
+import {v4 as uuidv4} from "uuid";
 import "./Tab.css";
 
 function Tab(props) {
@@ -8,7 +9,7 @@ function Tab(props) {
 
     function renderInfo() {
         return data.map((d, i) => (
-            <span className="Tooltip-container" onClick={toggleIsRole}>
+            <span className="Tooltip-container" onClick={toggleIsRole} key={uuidv4()}>
                 {isRole ? <span>{d.role}</span> : <span>{d.name}</span>}
             </span>
         ));
