@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 import useToggle from "./hooks/useToggle";
-import {getLocal, setLocal} from "./utility";
+import {getLocal, setLocal, initStorage} from "./utility";
 import ReviewForm from "./ReviewForm";
 import "./Review.css";
 
@@ -8,9 +8,7 @@ function Review(props) {
     let key = props.reviewKey;
     const placeholder = "";
 
-    if (!getLocal(key)) {
-        setLocal(key, placeholder);
-    }
+    initStorage(key, placeholder);
 
     let [isEditing, toggleIsEditing] = useToggle(false);
     let [reviewText, setReviewText] = useState(getLocal(key));
