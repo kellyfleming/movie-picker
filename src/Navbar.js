@@ -8,6 +8,7 @@ function Navbar(props) {
     let location = useLocation();
     let path = location.pathname.split("/")[1];
     let needGradient = path !== "about" && path !== "";
+
     return (
         <header className="Navbar-wrapper">
             {needGradient
