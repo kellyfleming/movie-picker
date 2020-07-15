@@ -9,7 +9,7 @@ import filmData from "./data";
 
 function App() {
   const keys = Object.keys(filmData);
-  let [randomPath, setRandomPath] = useState(""); // change initial state later?
+  let [randomPath, setRandomPath] = useState("");
   let location = useLocation();
 
   const setRandomLink = useCallback(
@@ -33,7 +33,6 @@ function App() {
 
   return (
     <div className="App">
-        {/* header image and gradient mask */}
         <HeaderImage />
         <Navbar randomPath={randomPath}/>
         <Switch>
