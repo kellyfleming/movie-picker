@@ -4,12 +4,20 @@ import Tab from "./Tab";
 import Interaction from "./Interaction";
 import Review from "./Review";
 import filmData from "./data";
+import Error from "./Error";
 import "./Film.css";
 
 function Film(props) {
     let match = useRouteMatch();
     let params = useParams();
     let key = params.film;
+
+    if (!Object.keys(filmData).includes(key)) {
+        return (
+            <Error />
+        );
+    }
+
     let likedKey = `${key}-liked`;
     let watchedKey = `${key}-watched`;
     let ratingKey = `${key}-rating`;
