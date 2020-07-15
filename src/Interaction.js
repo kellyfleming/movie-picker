@@ -1,22 +1,14 @@
 import React, {useState, useEffect} from "react";
 import StarRating from "./StarRating";
 import "./Interaction.css";
-import {getLocal, setLocal} from "./utility";
+import {getLocal, setLocal, initStorage, toggle} from "./utility";
 
 function Interaction(props) {
     let {likedKey, watchedKey, ratingKey} = props.keys;
 
-    if (!getLocal(likedKey)) {
-        setLocal(likedKey, false);
-    }
-
-    if (!getLocal(watchedKey)) {
-        setLocal(watchedKey, false);
-    }
-
-    if (!getLocal(ratingKey)) {
-        setLocal(ratingKey, 0);
-    }
+    initStorage(likedKey, false);
+    initStorage(watchedKey, false);
+    initStorage(ratingKey, 0);
     
     let [isLiked, setIsLiked] = useState(JSON.parse(getLocal(likedKey)));
     let [hasWatched, sethasWatched] = useState(JSON.parse(getLocal(watchedKey)));
@@ -30,14 +22,6 @@ function Interaction(props) {
 
     let likeToggleClasses = `${isLiked ? "liked fas" : "unliked far"} fa-heart`;
     let seenToggleClasses = `${hasWatched ? "seen fas" : "notSeen far"} fa-eye`;
-
-    function toggle(key, setter) {
-        let current = JSON.parse(getLocal(key));
-        if (current !== null) {
-            setLocal(key, !current);
-            setter(!current);
-        }
-    }
 
     function handleLike() {
         if (!hasWatched) {
@@ -60,10 +44,6 @@ function Interaction(props) {
         if (!hasWatched) {
             toggle(watchedKey, sethasWatched);
         }
-        setSavedRating(val);
-    }
-
-    function setSavedRating(val) {
         setLocal(ratingKey, val);
         setRating(val);
     }
