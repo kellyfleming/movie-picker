@@ -31,4 +31,18 @@ function setLocal(key, val) {
     window.localStorage.setItem(key, val);
 }
 
-export {getRandom, toggleLinkContainer, closeLinkContainer, getLocal, setLocal};
+function initStorage(key, val) {
+    if (!getLocal(key)) {
+        setLocal(key, val);
+    }
+}
+
+function toggle(key, setter) {
+    let current = JSON.parse(getLocal(key));
+    if (current !== null) {
+        setLocal(key, !current);
+        setter(!current);
+    }
+}
+
+export {getRandom, toggleLinkContainer, closeLinkContainer, getLocal, setLocal, initStorage, toggle};
