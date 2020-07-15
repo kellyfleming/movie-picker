@@ -1,6 +1,25 @@
 .About {
-    width: 100%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 2;
+}
+
+.About p {
+    padding: 0.5em 2em;
+}
+
+.About a {
+    color: greenyellow;
+}
+
+.About h4 {
+    text-decoration: underline greenyellow;
+}
+
+.About h1 {
+    border-bottom: dashed 1px greenyellow;
 }
