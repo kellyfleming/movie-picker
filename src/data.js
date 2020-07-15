@@ -356,7 +356,7 @@ export default {
         posterSrc: interstellarPoster,
         headerSrc: interstellarHeader,
         tagline: "Mankind was born on Earth. It was never meant to die here.",
-        synopsis: "Interstellar chronicles the adventures of a group of explorers who make use of a newly discovered wormhole to surpass the limitations on human space travel and conquer the vast distances involved in an interstellar voyage.",
+        synopsis: "The adventures of a group of explorers who make use of a newly discovered wormhole to surpass the limitations on human space travel and conquer the vast distances involved in an interstellar voyage.",
         cast: [
             {name: "Matthew McConaughey", role: "Joseph \"Coop\" Cooper"},
             {name: "Jessica Chastain", role: "Murphy \"Murph\" Cooper"},
