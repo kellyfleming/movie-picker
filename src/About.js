@@ -14,6 +14,7 @@ function About() {
             <p>Custom dropdown in navbar made with HTML, CSS, and vanilla JavaScript.</p>
             <p>Icons provided by <a href="https://fontawesome.com/" target="_blank" rel="noopener noreferrer">Font Awesome</a>. I personally modified the star SVGs used in this project, and my modifications are not endorsed by Font Awesome. All icons used are used under the <a href="https://fontawesome.com/license" target="_blank" rel="noopener noreferrer">Creative Commons Attribution 4.0 International License</a>.</p>
             <p><a href="https://reactrouter.com/" target="_blank" rel="noopener noreferrer">React Router</a> was used for routing.</p>
+            <p>All film data sourced from <a href="https://www.themoviedb.org/" target="_blank" rel="noopener noreferrer">The Movie Database (TMDb)</a>.</p>
             <p>All of the chosen films are somewhere in my top 25, with <Link to="/the-witch">The Witch</Link> holding steady at #1.</p>
         </div>
     );
