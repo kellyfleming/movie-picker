@@ -22,12 +22,6 @@ function HeaderImage() {
             </div>
             }
         </span>
-        // <div className="Header-container">
-        //     <div id="header">
-        //         {headerSrc && <div className="Header-image" style={{backgroundImage: `url(${headerSrc})`}}></div>}
-        //     </div>
-        //     <div className="Header-mask"></div>
-        // </div>
     );
 }
 
