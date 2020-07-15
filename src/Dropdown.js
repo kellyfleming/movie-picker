@@ -7,7 +7,9 @@ import "./Dropdown.css";
 function Dropdown(props) {
     let {keys, filmData, randomPath} = props;
     let location = useLocation();
-
+    let path = location.pathname;
+    let key = path.split("/")[1]; // either "" or path
+    
     function getLinks() {
         return keys.map(key => (
         <li key={uuidv4()}>
@@ -19,9 +21,7 @@ function Dropdown(props) {
     }
 
     function getCurrent() {
-        let path = location.pathname;
-        let key = path.split("/")[1]; // either "" or path
-        if (key === "" || key === "about") { // fix the route so that we can handle anything, or just do De Morgan's lmao
+        if (key === "" || key === "about" || !(keys.includes(key))) {
             return (
                 <span>
                     Choose a film
