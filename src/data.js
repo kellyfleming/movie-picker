@@ -211,7 +211,7 @@ export default {
             {name: "Jamie Gross", role: "Editor"},
             {name: "April Napier", role: "Costume Design"},
             {name: "Katie Byron", role: "Production Design"},
-            {name: "Onnalee Blank", role: "Additional Sound Re-recording Mixer, Supervising Sound Editor"},
+            {name: "Onnalee Blank", role: "Supervising Sound Editor"},
             {name: "Rostam Batmanglij", role: "Music"},
             {name: "Lisa Pinero", role: "Sound Mixer"},
             {name: "Emily Halpern", role: "Writer"},
@@ -294,7 +294,7 @@ export default {
             {name: "Simon Guilbault", role: "Set Designer"},
             {name: "Jean Gagnon", role: "Set Designer"},
             {name: "Renee April", role: "Costume Design"},
-            {name: "Johann Johannsson", role: "Music Arranger, Music Producer, Musician, Original Music Composer"},
+            {name: "Johann Johannsson", role: "Original Music Composer"},
             {name: "Eric Heisserer", role: "Writer"}
         ]
     },
@@ -339,7 +339,7 @@ export default {
             {name: "Bob Ducsay", role: "Editor"},
             {name: "Michael Kaplan", role: "Costume Design"},
             {name: "John Williams", role: "Original Music Composer"},
-            {name: "Ren Klyce", role: "Sound Designer, Sound Re-Recording Mixer, Supervising Sound Editor"},
+            {name: "Ren Klyce", role: "Sound Designer, Supervising Sound Editor"},
             {name: "Matthew Wood", role: "Supervising Sound Editor"},
             {name: "Rick Heinrichs", role: "Production Design"},
             {name: "Richard Roberts", role: "Set Decoration"},
