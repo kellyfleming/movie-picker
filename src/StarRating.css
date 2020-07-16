@@ -13,3 +13,27 @@
     display: flex;
     justify-content: center;
 }
+
+#saved {
+    border: solid 1px silver;
+}
+
+#hover {
+    border: solid 1px silver;
+}
+
+.StarRating-control {
+    border: solid 1px blue;
+}
+
+.show {
+    display: "";
+}
+
+.hide {
+    display: none;
+}
+
+.disable {
+    pointer-events: none;
+}

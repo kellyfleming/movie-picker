@@ -10,7 +10,7 @@ function Star(props) {
                 updateHoverStars={props.updateHoverStars}
                 halfIndex={0}
                 parentIndex={props.pIndex}
-                isHovering={props.isHovering}
+                // isHovering={props.isHovering}
             />
             <StarHalf
                 isFilled={props.value === 1}
@@ -19,7 +19,7 @@ function Star(props) {
                 updateSavedStars={props.updateSavedStars}
                 halfIndex={1}
                 parentIndex={props.pIndex}
-                isHovering={props.isHovering}
+                // isHovering={props.isHovering}
             />
         </span>
     );

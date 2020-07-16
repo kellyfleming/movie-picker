@@ -7,6 +7,7 @@ function StarHalf(props) {
     let classes = `
         ${props.isFlipped && "StarHalf-flipped"}
         ${props.isHovering ? "StarHalf-hover" : "StarHalf-saved"}
+        disable
     `;
 
     function handleMouseOver() {
@@ -20,10 +21,10 @@ function StarHalf(props) {
     }
 
     return (
-        <span className="StarHalf">
+        <span className="StarHalf" onMouseOver={handleMouseOver} onClick={handleClick}>
             {props.isFilled 
-            ? <Solid className={classes} onClick={handleClick} onMouseOver={handleMouseOver}/> 
-            : <Outline className={classes} onClick={handleClick} onMouseOver={handleMouseOver}/>}
+            ? <Solid className={classes} /> 
+            : <Outline className={classes} />}
         </span>
     )
 }
