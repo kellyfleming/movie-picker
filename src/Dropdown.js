@@ -42,7 +42,7 @@ function Dropdown(props) {
         <div className="Dropdown-container">
             <div className="Button-container">
                 <Link to="/about" className="smaller NavbarLink">About</Link>
-                <button className="larger" onClick={toggleLinkContainer}>{getCurrent()}</button>
+                <button id="dropdownToggle" className="larger" onClick={toggleLinkContainer}>{getCurrent()}</button>
                 <Link className="smaller NavbarLink" to={randomPath} onClick={closeLinkContainer}>Random</Link>
             </div>
             <ul className="Link-container hidden">

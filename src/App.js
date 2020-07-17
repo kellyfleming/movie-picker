@@ -1,6 +1,6 @@
 import React, {useState, useCallback, useEffect} from 'react';
 import {Switch, Route, useLocation, Redirect} from "react-router-dom";
-import {getRandom} from "./utility";
+import {getRandom, closeLinkContainer} from "./utility";
 import HeaderImage from "./HeaderImage";
 import Navbar from "./Navbar";
 import About from "./About";
@@ -30,6 +30,12 @@ function App() {
   useEffect(() => {
     setRandomLink(location.pathname);
   }, [location.pathname, setRandomLink]);
+
+  window.onclick = function(evt) {
+    if (!evt.target.matches("#dropdownToggle")) {
+      closeLinkContainer();
+    }
+  }
 
   return (
     <div className="App">

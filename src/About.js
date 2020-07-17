@@ -5,7 +5,7 @@ import "./About.css";
 function About() {
     return (
         <div className="About">
-            <h1>Movie Picker</h1>
+            <h1>About Movie Picker</h1>
             <hr/>
             <h4>Welcome! Choose a film or click random for a surprise.</h4>
             <hr/>
