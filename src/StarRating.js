@@ -1,5 +1,6 @@
 import React, {useState, useEffect, useCallback} from "react";
 import Star from "./Star";
+import {addClass, removeClass} from "./utility";
 import "./StarRating.css";
 
 function StarRating(props) {
@@ -60,19 +61,19 @@ function StarRating(props) {
     }
 
     function clearHoverStars() {
-        document.querySelector("#hover").classList.add("hide");
-        document.querySelector("#hover").classList.remove("show");
-        document.querySelector("#saved").classList.add("show");
-        document.querySelector("#saved").classList.remove("hide");
+        addClass("#hover", "hide");
+        removeClass("#hover", "show");
+        addClass("#saved", "show");
+        removeClass("#saved", "hide");
         setHoverStars(Array(numStars).fill(0));
         
     }
 
     function handleEnter() {
-        document.querySelector("#saved").classList.add("hide");
-        document.querySelector("#saved").classList.remove("show");
-        document.querySelector("#hover").classList.add("show");
-        document.querySelector("#hover").classList.remove("hide");
+        addClass("#saved", "hide");
+        removeClass("#saved", "show");
+        addClass("#hover", "show");
+        removeClass("#hover", "hide");
     }
 
     function generateSVGArray(arr) {

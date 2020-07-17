@@ -45,4 +45,12 @@ function toggle(key, setter) {
     }
 }
 
-export {getRandom, toggleLinkContainer, closeLinkContainer, getLocal, setLocal, initStorage, toggle};
+function addClass(id, c) {
+    document.querySelector(id).classList.add(c);
+}
+
+function removeClass(id, c) {
+    document.querySelector(id).classList.remove(c);
+}
+
+export {getRandom, toggleLinkContainer, closeLinkContainer, getLocal, setLocal, initStorage, toggle, addClass, removeClass};
