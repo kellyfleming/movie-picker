@@ -2,7 +2,8 @@ function getRandom(arr) {
     return arr[Math.floor(Math.random() * arr.length)];
 }
 
-function toggleLinkContainer() {
+function toggleLinkContainer(evt) {
+    evt.stopPropagation();
     let $linkContainer = document.querySelector(".Link-container");
     let $caretSpan = document.querySelector("#caret");
     $linkContainer.classList.toggle("hidden");

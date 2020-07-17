@@ -23,14 +23,14 @@ function Dropdown(props) {
     function getCurrent() {
         if (key === "" || key === "about" || !(keys.includes(key))) {
             return (
-                <span>
+                <span id="dropdownToggleText" onClick={toggleLinkContainer}>
                     Choose a film
                     <span id="caret" className="fas fa-caret-down"></span>
                 </span>
             );
         } else {
             return (
-                <span>
+                <span id="dropdownToggleText" onClick={toggleLinkContainer}>
                     {filmData[key].title}
                     <span id="caret" className="fas fa-caret-down"></span>
                 </span>
