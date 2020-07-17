@@ -15,15 +15,11 @@
 }
 
 #saved {
-    border: solid 1px silver;
+    fill: greenyellow;
 }
 
 #hover {
-    border: solid 1px silver;
-}
-
-.StarRating-control {
-    border: solid 1px blue;
+    fill: mediumaquamarine;
 }
 
 .show {

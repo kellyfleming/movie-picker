@@ -6,7 +6,6 @@ import "./StarHalf.css";
 function StarHalf(props) {
     let classes = `
         ${props.isFlipped && "StarHalf-flipped"}
-        ${props.isHovering ? "StarHalf-hover" : "StarHalf-saved"}
         disable
     `;
 

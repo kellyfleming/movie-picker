@@ -2,14 +2,6 @@
     width: 0.85rem;
 }
 
-.StarHalf-saved {
-    fill: darkorange;
-}
-
-.StarHalf-hover {
-    fill: orange;
-}
-
 .StarHalf-flipped {
     transform: scaleX(-1);
 }

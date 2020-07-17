@@ -30,7 +30,6 @@ function StarRating(props) {
 
     let [savedStars, setSavedStars] = useState(generateStars(props.savedValue));
     let [hoverStars, setHoverStars] = useState(Array(numStars).fill(0));
-    //let [isHovering, setIsHovering] = useState(false);
 
     function updateSavedStars(starValue, starIndex) {
         let updatedStars = savedStars.map((val, index) => {
@@ -61,19 +60,15 @@ function StarRating(props) {
     }
 
     function clearHoverStars() {
-        console.log("out");
         document.querySelector("#hover").classList.add("hide");
         document.querySelector("#hover").classList.remove("show");
         document.querySelector("#saved").classList.add("show");
         document.querySelector("#saved").classList.remove("hide");
         setHoverStars(Array(numStars).fill(0));
         
-        //setIsHovering(false);
     }
 
     function handleEnter() {
-        //setIsHovering(true);
-        console.log("in");
         document.querySelector("#saved").classList.add("hide");
         document.querySelector("#saved").classList.remove("show");
         document.querySelector("#hover").classList.add("show");
@@ -88,7 +83,6 @@ function StarRating(props) {
                 key={index}
                 updateSavedStars={updateSavedStars}
                 updateHoverStars={updateHoverStars}
-                //isHovering={isHovering}
              />
         ));
     }
@@ -99,7 +93,6 @@ function StarRating(props) {
                 <span className="fas fa-ban"></span>
             </span>
             <div className="StarRating-control" onMouseEnter={handleEnter} onMouseLeave={clearHoverStars}>
-                {/* {isHovering ? generateSVGArray(hoverStars) : generateSVGArray(savedStars)} */}
                 <div id="saved" className="show">
                     {generateSVGArray(savedStars)}
                 </div>
