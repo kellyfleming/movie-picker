@@ -1,3 +1,9 @@
+# Movie Picker
+
+This project can be interacted with [here](https://movie-picker-project.herokuapp.com/).
+
+*Warning*: This project is *not* optimized for mobile viewing and should be viewed on a desktop or laptop.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
