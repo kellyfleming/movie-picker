@@ -1,7 +1,8 @@
 # Movie Picker
 
 This project can be interacted with [here](https://movie-picker-project.herokuapp.com/).
-Check out this repository's wiki for more information!
+
+***Check out this repository's wiki for more information!***
 
 *Warning*: This project is not optimized for mobile viewing and should *only* be viewed on a desktop or laptop.
 
