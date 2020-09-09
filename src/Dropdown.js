@@ -25,14 +25,14 @@ function Dropdown(props) {
             return (
                 <span id="dropdownToggleText" onClick={toggleLinkContainer}>
                     Choose a film
-                    <span className="fas fa-caret-down dropdown__button--caret"></span>
+                    <span id="caret" className="fas fa-caret-down dropdown__button--caret"></span>
                 </span>
             );
         } else {
             return (
                 <span id="dropdownToggleText" onClick={toggleLinkContainer}>
                     {filmData[key].title}
-                    <span className="fas fa-caret-down dropdown__button--caret"></span>
+                    <span id="caret" className="fas fa-caret-down dropdown__button--caret"></span>
                 </span>
             );
         }
