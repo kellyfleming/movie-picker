@@ -1,13 +1,3 @@
-.About {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto;
-    text-align: center;
-    line-height: 2;
-}
-
 .About p {
     padding: 0.5em 2em;
 }
@@ -21,5 +11,27 @@
 }
 
 .About h1 {
+    border-bottom: dashed 1px greenyellow;
+}
+
+.about {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 2;
+}
+
+.about--link {
+    color: greenyellow;
+}
+
+.about--underline {
+    text-decoration: underline greenyellow;
+}
+
+.about--border-bottom {
     border-bottom: dashed 1px greenyellow;
 }
