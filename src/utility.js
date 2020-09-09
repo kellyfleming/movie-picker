@@ -4,10 +4,10 @@ function getRandom(arr) {
 
 function toggleLinkContainer(evt) {
     evt.stopPropagation();
-    let $linkContainer = document.querySelector(".Link-container");
+    let $linkContainer = document.querySelector(".link-container__list");
     let $caretSpan = document.querySelector("#caret");
-    $linkContainer.classList.toggle("hidden");
-    if ($linkContainer.classList.contains("hidden")) {
+    $linkContainer.classList.toggle("dropdown--hidden");
+    if ($linkContainer.classList.contains("dropdown--hidden")) {
         $caretSpan.classList.remove("fa-caret-up");
         $caretSpan.classList.add("fa-caret-down");
     } else {
@@ -17,9 +17,9 @@ function toggleLinkContainer(evt) {
 }
 
 function closeLinkContainer() {
-    let $linkContainer = document.querySelector(".Link-container");
+    let $linkContainer = document.querySelector(".link-container__list");
     let $caretSpan = document.querySelector("#caret");
-    $linkContainer.classList.add("hidden");
+    $linkContainer.classList.add("dropdown--hidden");
     $caretSpan.classList.remove("fa-caret-up");
     $caretSpan.classList.add("fa-caret-down");
 }
