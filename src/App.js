@@ -1,6 +1,7 @@
 import React, {useState, useCallback, useEffect} from 'react';
 import {Switch, Route, useLocation, Redirect} from "react-router-dom";
 import {getRandom, closeLinkContainer} from "./utility";
+import "./App.css";
 import HeaderImage from "./HeaderImage";
 import Navbar from "./Navbar";
 import About from "./About";
@@ -30,6 +31,10 @@ function App() {
   useEffect(() => {
     setRandomLink(location.pathname);
   }, [location.pathname, setRandomLink]);
+
+  useEffect(() => {
+    document.body.classList.add("app");
+  });
 
   window.onclick = function(evt) {
     console.log(evt.target);
