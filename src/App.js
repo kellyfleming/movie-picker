@@ -2,6 +2,7 @@ import React, {useState, useCallback, useEffect} from 'react';
 import {Switch, Route, useLocation, Redirect} from "react-router-dom";
 import {getRandom, closeLinkContainer} from "./utility";
 import "./App.css";
+import "./utility.css";
 import HeaderImage from "./HeaderImage";
 import Navbar from "./Navbar";
 import About from "./About";
