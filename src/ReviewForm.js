@@ -15,11 +15,11 @@ function ReviewForm(props) {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
-            <textarea value={input} onChange={handleChange}></textarea>
-            <div className="Review-form-buttons">
-                <button type="submit">Save Review</button>
-                <button type="button" onClick={props.toggleIsEditing}>Cancel</button>
+        <form className="review__form" onSubmit={handleSubmit}>
+            <textarea className="review__text-area" value={input} onChange={handleChange}></textarea>
+            <div className="review__form--button-container flex-row">
+                <button className="button button--primary" type="submit">Save Review</button>
+                <button className="button button--danger" type="button" onClick={props.toggleIsEditing}>Cancel</button>
             </div>
         </form>
     );
