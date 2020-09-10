@@ -89,15 +89,15 @@ function StarRating(props) {
     }
 
     return (
-        <div className="StarRating-container">
-            <span className="StarRating-clear" onClick={props.clearSavedRating}>
+        <div className="star-rating--container flex-row">
+            <span className="clear" onClick={props.clearSavedRating}>
                 <span className="fas fa-ban"></span>
             </span>
-            <div className="StarRating-control" onMouseEnter={handleEnter} onMouseLeave={clearHoverStars}>
-                <div id="saved" className="show">
+            <div onMouseEnter={handleEnter} onMouseLeave={clearHoverStars}>
+                <div id="saved" className="show star-rating--saved">
                     {generateSVGArray(savedStars)}
                 </div>
-                <div id="hover" className="hide">
+                <div id="hover" className="hide star-rating--hovering">
                     {generateSVGArray(hoverStars)}
                 </div>
             </div>
