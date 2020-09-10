@@ -4,10 +4,6 @@
     width: 75%;
 }
 
-.dropdown--flex {
-    display: flex;
-}
-
 .dropdown__button {
     font-size: large;
     outline: none;

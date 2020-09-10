@@ -3,6 +3,7 @@ import {Link, useLocation} from "react-router-dom";
 import {toggleLinkContainer, closeLinkContainer} from "./utility";
 import {v4 as uuidv4} from "uuid";
 import "./Dropdown.css";
+import "./utility.css";
 
 function Dropdown(props) {
     let {keys, filmData, randomPath} = props;
@@ -40,7 +41,7 @@ function Dropdown(props) {
 
     return (
         <div className="dropdown--sizing">
-            <div className="dropdown--flex">
+            <div className="flex-row">
                 <Link to="/about" className="dropdown__button dropdown__button--shrink dropdown__button--subdued">About</Link>
                 <button id="dropdownToggle" className="dropdown__button dropdown__button--grow dropdown__button--bright" onClick={toggleLinkContainer}>{getCurrent()}</button>
                 <Link className="dropdown__button dropdown__button--shrink dropdown__button--subdued" to={randomPath} onClick={closeLinkContainer}>Random</Link>
