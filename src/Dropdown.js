@@ -45,7 +45,7 @@ function Dropdown(props) {
                 <button id="dropdownToggle" className="button button--grow button--primary" onClick={toggleLinkContainer}>{getCurrent()}</button>
                 <Link className="button button--shrink button--default" to={randomPath} onClick={closeLinkContainer}>Random</Link>
             </div>
-            <ul className="link-container__list dropdown--hidden">
+            <ul className="link-container__list hide">
                 {getLinks()}
             </ul>
         </div>

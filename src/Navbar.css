@@ -20,3 +20,25 @@
     background-image: linear-gradient(to bottom, rgb(20, 24, 28), rgba(20, 24, 28, 0));
     width: 100%;
 }
+
+@media screen and (max-width: 1024px) {
+    .navbar--wrapper {
+        width: 900px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar--wrapper {
+        width: 675px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .navbar--wrapper {
+        width: 100%;
+    }
+
+    .navbar--background {
+        background-image: none;
+    }
+}

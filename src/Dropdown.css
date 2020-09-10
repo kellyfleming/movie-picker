@@ -4,10 +4,6 @@
     width: 75%;
 }
 
-.dropdown--hidden {
-    display: none;
-}
-
 .link-container__list {
     background-color: rgb(214, 252, 214);
     margin: 0;

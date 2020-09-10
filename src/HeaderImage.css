@@ -59,3 +59,35 @@
             rgba(20, 24, 28, 0.12) 53%, rgba(20, 24, 28, 0.05) 55%,
             rgba(20, 24, 28, 0.02) 57%, rgba(20, 24, 28, 0.00) 59%);
 }
+
+@media screen and (max-width: 1024px) {
+    .header {
+        width: 900px;
+    }
+
+    .header--mask::before {
+        width: 900px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        width: 675px;
+        height: 575px;
+    }
+
+    .header--container {
+        height: 575px;
+    }
+
+    .header--mask::before {
+        width: 675px;
+        height: 575px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .header--container {
+        display: none;
+    }
+}
