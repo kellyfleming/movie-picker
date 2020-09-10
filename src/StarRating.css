@@ -1,35 +1,26 @@
-.StarRating-clear {
+.clear {
     font-size: 1.5rem;
     color: rgb(175, 0, 0);
     margin-right: 0.25rem;
 }
 
-.StarRating-clear:hover {
+.clear:hover {
     color: red;
     cursor: pointer;
 }
 
-.StarRating-container {
-    display: flex;
+.star-rating--container {
     justify-content: center;
 }
 
-#saved {
+.star-rating--saved {
     fill: greenyellow;
 }
 
-#hover {
+.star-rating--hovering {
     fill: mediumaquamarine;
 }
 
-.show {
-    display: "";
-}
-
-.hide {
-    display: none;
-}
-
-.disable {
+.disable-pointer-events {
     pointer-events: none;
 }
