@@ -6,8 +6,8 @@ function toggleLinkContainer(evt) {
     evt.stopPropagation();
     let $linkContainer = document.querySelector(".link-container__list");
     let $caretSpan = document.querySelector("#caret");
-    $linkContainer.classList.toggle("dropdown--hidden");
-    if ($linkContainer.classList.contains("dropdown--hidden")) {
+    $linkContainer.classList.toggle("hide");
+    if ($linkContainer.classList.contains("hide")) {
         $caretSpan.classList.remove("fa-caret-up");
         $caretSpan.classList.add("fa-caret-down");
     } else {
@@ -19,7 +19,7 @@ function toggleLinkContainer(evt) {
 function closeLinkContainer() {
     let $linkContainer = document.querySelector(".link-container__list");
     let $caretSpan = document.querySelector("#caret");
-    $linkContainer.classList.add("dropdown--hidden");
+    $linkContainer.classList.add("hide");
     $caretSpan.classList.remove("fa-caret-up");
     $caretSpan.classList.add("fa-caret-down");
 }
