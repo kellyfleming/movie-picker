@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import StarRating from "./StarRating";
 import "./Interaction.css";
+import "./utility.css";
 import {getLocal, setLocal, initStorage, toggle} from "./utility";
 
 function Interaction(props) {
@@ -20,8 +21,8 @@ function Interaction(props) {
         setRating(JSON.parse(getLocal(ratingKey)));
     }, [likedKey, watchedKey, ratingKey]);
 
-    let likeToggleClasses = `${isLiked ? "liked fas" : "unliked far"} fa-heart`;
-    let seenToggleClasses = `${hasWatched ? "seen fas" : "notSeen far"} fa-eye`;
+    let likeToggleClasses = `${isLiked ? "heart--liked fas" : "heart--unliked far"} fa-heart`;
+    let seenToggleClasses = `${hasWatched ? "eye--seen fas" : "eye--not-seen far"} fa-eye`;
 
     function handleLike() {
         if (!hasWatched) {
@@ -54,15 +55,15 @@ function Interaction(props) {
     }
 
     return (
-        <div className="Interaction-wrapper">
-            <div className="Interaction-toggles">
-                <div className="Interaction-icon iconBorder" onClick={handleSeen}>
+        <div className="interaction--wrapper flex-col">
+            <div className="interaction--toggles flex-row">
+                <div className="icon--container flex-col" onClick={handleSeen}>
                     <span id="eye" className={seenToggleClasses}></span>
-                    <span className="labelText">{JSON.parse(getLocal(watchedKey)) ? "Seen" : "Seen?"}</span>
+                    <span className="icon__label--text-size">{JSON.parse(getLocal(watchedKey)) ? "Seen" : "Seen?"}</span>
                 </div>
-                <div className="Interaction-icon" onClick={handleLike}>
+                <div className="icon--container flex-col" onClick={handleLike}>
                     <span id="heart" className={likeToggleClasses}></span>
-                    <span className="labelText">{JSON.parse(getLocal(likedKey)) ? "Liked" : "Like?"}</span>
+                    <span className="icon__label--text-size">{JSON.parse(getLocal(likedKey)) ? "Liked" : "Like?"}</span>
                 </div>
             </div>
             <StarRating savedValue={JSON.parse(getLocal(ratingKey))} handleRating={handleRating} clearSavedRating={clearSavedRating}/>
