@@ -1,10 +1,11 @@
 import React from "react";
 import {Link} from "react-router-dom";
 import "./About.css";
+import "./utility.css";
 
 function About() {
     return (
-        <div className="about">
+        <div className="about flex-col">
             <h1 className="about--border-bottom">About Movie Picker</h1>
             <hr/>
             <h4 className="about--underline">Welcome! Choose a film or click random for a surprise.</h4>
