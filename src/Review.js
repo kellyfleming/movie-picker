@@ -3,6 +3,7 @@ import useToggle from "./hooks/useToggle";
 import {getLocal, setLocal, initStorage} from "./utility";
 import ReviewForm from "./ReviewForm";
 import "./Review.css";
+import "./utility.css";
 
 function Review(props) {
     let key = props.reviewKey;
@@ -34,8 +35,8 @@ function Review(props) {
             } else {
                 return (
                     <>
-                        <div className="Review-text">{reviewText}</div>
-                        <div className="Review-button-container">
+                        <div className="review--text">{reviewText}</div>
+                        <div className="review__button--container flex-row">
                             <button onClick={toggleIsEditing}>Edit Review</button>
                             <button onClick={deleteSavedReview}>Delete Review</button>
                         </div>
@@ -48,7 +49,7 @@ function Review(props) {
     }
 
     return (
-        <div className="Review-container">
+        <div className="review flex-col">
             {renderReview()}
         </div>
     );
