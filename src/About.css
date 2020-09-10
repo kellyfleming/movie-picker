@@ -1,25 +1,19 @@
-.About {
+.about {
     width: 50%;
-    display: flex;
-    flex-direction: column;
     align-items: center;
     margin: 0 auto;
     text-align: center;
     line-height: 2;
 }
 
-.About p {
-    padding: 0.5em 2em;
-}
-
-.About a {
+.about__link {
     color: greenyellow;
 }
 
-.About h4 {
+.about--underline {
     text-decoration: underline greenyellow;
 }
 
-.About h1 {
+.about--border-bottom {
     border-bottom: dashed 1px greenyellow;
 }

@@ -24,32 +24,32 @@ function Film(props) {
     let reviewKey = `${key}-review`;
     let {title, year, director, posterSrc, synopsis, tagline} = filmData[key];
     return (
-        <main className="Main-wrapper">
-            <div className="Main-container">
-                <div className="Main-sidebar">
-                    <div className="Sidebar-poster" style={{backgroundImage: `url(${posterSrc})`}}>
+        <main className="main--wrapper flex-row">
+            <div className="main--container flex-row">
+                <div className="sidebar">
+                    <div className="sidebar__poster" style={{backgroundImage: `url(${posterSrc})`}}>
                     </div>
                 </div>
-                <div className="Main-content">
-                    <div className="Content-title">
-                        <h1>{title}</h1>
-                        <span>{year}</span>
-                        Directed by <span>{director}</span>
+                <div className="flex-col">
+                    <div className="title--margin">
+                        <h1 className="title__film-name">{title}</h1>
+                        <span className="title--inner-spacing">{year}</span>
+                        Directed by <span className="title--inner-spacing">{director}</span>
                     </div>
-                    <div className="Content-wrapper">
-                        <div className="Content-left">
-                            <div className="Content-description">
-                                <p className="Description-tagline">
+                    <div className="flex-row">
+                        <div className="center-content--sizing">
+                            <div>
+                                <p className="text-uppercase">
                                     {tagline}
                                 </p>
-                                <p className="Description-synopsis">
+                                <p>
                                     {synopsis}
                                 </p>
                             </div>
-                            <div className="Content-tabs">
-                                <ul>
-                                    <li><NavLink activeClassName="Active-tab" exact to={`${match.url}`}>Cast</NavLink></li>
-                                    <li><NavLink activeClassName="Active-tab" exact to={`${match.url}/crew`}>Crew</NavLink></li>
+                            <div className="tabs">
+                                <ul className="tabs__list flex-row">
+                                    <li className="tabs__item"><NavLink activeClassName="tabs__link--active" className="tabs__link" exact to={`${match.url}`}>Cast</NavLink></li>
+                                    <li className="tabs__item"><NavLink activeClassName="tabs__link--active" className="tabs__link" exact to={`${match.url}/crew`}>Crew</NavLink></li>
                                 </ul>
                                 <Switch>
                                     <Route path={`${match.path}/crew`}>
@@ -62,7 +62,7 @@ function Film(props) {
                             </div>
                             <Review reviewKey={reviewKey}/>
                         </div>
-                        <div className="Content-right">
+                        <div className="interaction--wrapper flex-col">
                             <Interaction keys={{likedKey, watchedKey, ratingKey}}/>
                         </div>
                     </div>

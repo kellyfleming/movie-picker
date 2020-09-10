@@ -1,5 +1,3 @@
-.Error {
-    display: flex;
-    flex-direction: column;
+.error {
     align-items: center;
 }

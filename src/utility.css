@@ -1,0 +1,84 @@
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.button {
+    font-size: large;
+    outline: none;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    border: 2px solid transparent;
+    border-radius: 0.25rem;
+}
+
+.button--shrink {
+    flex-grow: 1;
+}
+
+.button--grow {
+    flex-grow: 5;
+}
+
+.button--primary {
+    background-color: greenyellow;
+}
+
+.button--primary:active {
+    border: 2px inset rgb(153, 255, 0);
+    background-color: rgb(153, 235, 27);
+}
+
+.button--default {
+    background-color: rgb(202, 255, 122);
+}
+
+.button--default:active {
+    border: 2px inset rgb(153, 255, 0);
+    background-color: rgb(202, 255, 122);
+}
+
+.button--danger {
+    background-color: crimson;
+}
+
+.button--danger:active {
+    border: 2px inset rgb(140, 15, 40);
+    background-color: rgb(140, 15, 40);
+}
+
+.button--warning {
+    background-color: gold;
+}
+
+.button--warning:active {
+    border: 2px inset goldenrod;
+    background-color: goldenrod;
+}
+
+.button:hover {
+    box-shadow: 3px 3px 5px rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+}
+
+.button--caret {
+    padding-left: 0.5rem;
+}
+
+.show {
+    display: "";
+}
+
+.hide {
+    display: none;
+}

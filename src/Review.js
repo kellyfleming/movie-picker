@@ -30,14 +30,14 @@ function Review(props) {
     function renderReview() {
         if (!isEditing) {
             if (reviewText === placeholder) {
-                return <button onClick={toggleIsEditing}>Add Review</button>;
+                return <button className="button button--primary" onClick={toggleIsEditing}>Add Review</button>;
             } else {
                 return (
                     <>
-                        <div className="Review-text">{reviewText}</div>
-                        <div className="Review-button-container">
-                            <button onClick={toggleIsEditing}>Edit Review</button>
-                            <button onClick={deleteSavedReview}>Delete Review</button>
+                        <div className="review--text">{reviewText}</div>
+                        <div className="review__button--container flex-row">
+                            <button className="button button--warning" onClick={toggleIsEditing}>Edit Review</button>
+                            <button className="button button--danger" onClick={deleteSavedReview}>Delete Review</button>
                         </div>
                     </>
                 );
@@ -48,7 +48,7 @@ function Review(props) {
     }
 
     return (
-        <div className="Review-container">
+        <div className="review flex-col">
             {renderReview()}
         </div>
     );

@@ -14,11 +14,11 @@ function HeaderImage() {
 
         <span>
             {headerSrc &&
-            <div className="Header-container">
-                <div id="header">
-                    <div className="Header-image" style={{backgroundImage: `url(${headerSrc})`}}></div>
+            <div className="header--container">
+                <div className="header">
+                    <div className="header--image" style={{backgroundImage: `url(${headerSrc})`}}></div>
                 </div>
-                <div className="Header-mask"></div>
+                <div className="header--mask"></div>
             </div>
             }
         </span>

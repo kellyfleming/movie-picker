@@ -12,8 +12,8 @@ function Dropdown(props) {
     
     function getLinks() {
         return keys.map(key => (
-        <li key={uuidv4()}>
-            <Link to={filmData[key].path} onClick={toggleLinkContainer}>
+        <li className="link-container__item" key={uuidv4()}>
+            <Link to={filmData[key].path} onClick={toggleLinkContainer} className="link-container__link">
                 <div>{filmData[key].title}</div>
             </Link>
         </li>
@@ -25,27 +25,27 @@ function Dropdown(props) {
             return (
                 <span id="dropdownToggleText" onClick={toggleLinkContainer}>
                     Choose a film
-                    <span id="caret" className="fas fa-caret-down"></span>
+                    <span id="caret" className="fas fa-caret-down button--caret"></span>
                 </span>
             );
         } else {
             return (
                 <span id="dropdownToggleText" onClick={toggleLinkContainer}>
                     {filmData[key].title}
-                    <span id="caret" className="fas fa-caret-down"></span>
+                    <span id="caret" className="fas fa-caret-down button--caret"></span>
                 </span>
             );
         }
     }
 
     return (
-        <div className="Dropdown-container">
-            <div className="Button-container">
-                <Link to="/about" className="smaller NavbarLink">About</Link>
-                <button id="dropdownToggle" className="larger" onClick={toggleLinkContainer}>{getCurrent()}</button>
-                <Link className="smaller NavbarLink" to={randomPath} onClick={closeLinkContainer}>Random</Link>
+        <div className="dropdown--sizing">
+            <div className="flex-row">
+                <Link to="/about" className="button button--shrink button--default">About</Link>
+                <button id="dropdownToggle" className="button button--grow button--primary" onClick={toggleLinkContainer}>{getCurrent()}</button>
+                <Link className="button button--shrink button--default" to={randomPath} onClick={closeLinkContainer}>Random</Link>
             </div>
-            <ul className="Link-container hidden">
+            <ul className="link-container__list dropdown--hidden">
                 {getLinks()}
             </ul>
         </div>

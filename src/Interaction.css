@@ -1,60 +1,55 @@
-.Interaction-wrapper {
-    display: flex;
-    flex-direction: column;
+.interaction--wrapper {
     justify-content: space-around;
     height: 100%;
 }
 
-.Interaction-toggles {
-    display: flex;
+.interaction--toggles {
     justify-content: space-evenly;
     font-size: xx-large;
     padding-bottom: 1rem;
     border-bottom: solid 1px rgb(102, 104, 107);
 }
 
-.labelText {
+.icon__label--text-size {
     font-size: medium;
 }
 
-.Interaction-icon {
-    display: flex;
-    flex-direction: column;
+.icon--container {
     align-items: center;
 }
 
-.seen {
+.eye--seen {
     color: cyan;
 }
 
-.notSeen {
+.eye--not-seen {
     color: darkcyan;
 }
 
-.notSeen:hover {
+.eye--not-seen:hover {
     color: cyan;
     cursor: pointer;
 }
 
-.seen:hover {
+.eye--seen:hover {
     color: darkcyan;
     cursor: pointer;
 }
 
-.liked {
+.heart--liked {
     color: crimson;
 }
 
-.unliked {
+.heart--unliked {
     color: rgb(140, 15, 40);
 }
 
-.unliked:hover {
+.heart--unliked:hover {
     color: crimson;
     cursor: pointer;
 }
 
-.liked:hover {
+.heart--liked:hover {
     color: rgb(140, 15, 40);
     cursor: pointer;
 }

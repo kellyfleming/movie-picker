@@ -10,14 +10,14 @@ function Navbar(props) {
     let needGradient = path !== "about" && path !== "";
 
     return (
-        <header className="Navbar-wrapper">
+        <header className="navbar--wrapper">
             {needGradient
-                ? <div className="Navbar-background">
-                    <div className="Navbar-container">
+                ? <div className="navbar--background">
+                    <div className="navbar--container flex-row">
                         <Dropdown keys={Object.keys(filmData)} randomPath={props.randomPath} filmData={filmData} />
                     </div>
                 </div>
-                : <div className="Navbar-container">
+                : <div className="navbar--container flex-row">
                     <Dropdown keys={Object.keys(filmData)} randomPath={props.randomPath} filmData={filmData} />
                 </div>}
         </header>

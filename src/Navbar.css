@@ -1,4 +1,4 @@
-.Navbar-wrapper {
+.navbar--wrapper {
     height: 75px;
     position: sticky;
     top: 0;
@@ -7,14 +7,13 @@
     z-index: 5;
 }
 
-.Navbar-container {
-    display: flex;
+.navbar--container {
     height: inherit;
     justify-content: center;
     width: 100%;
 }
 
-.Navbar-background {
+.navbar--background {
     position: absolute;
     height: 75px;
     background-color: transparent;

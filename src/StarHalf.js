@@ -5,8 +5,9 @@ import "./StarHalf.css";
 
 function StarHalf(props) {
     let classes = `
-        ${props.isFlipped && "StarHalf-flipped"}
-        disable
+        ${props.isFlipped && "star-half--flipped"}
+        disable-pointer-events
+        star-half__svg
     `;
 
     function handleMouseOver() {
@@ -20,7 +21,7 @@ function StarHalf(props) {
     }
 
     return (
-        <span className="StarHalf" onMouseOver={handleMouseOver} onClick={handleClick}>
+        <span className="star-half" onMouseOver={handleMouseOver} onClick={handleClick}>
             {props.isFilled 
             ? <Solid className={classes} /> 
             : <Outline className={classes} />}
