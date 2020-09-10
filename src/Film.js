@@ -6,7 +6,6 @@ import Review from "./Review";
 import filmData from "./data";
 import Error from "./Error";
 import "./Film.css";
-import "./utility.css";
 
 function Film(props) {
     let match = useRouteMatch();
