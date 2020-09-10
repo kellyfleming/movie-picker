@@ -37,7 +37,6 @@ function App() {
   });
 
   window.onclick = function(evt) {
-    console.log(evt.target);
     if (!evt.target.matches("#dropdownToggle") || !evt.target.matches("#dropdownToggleText")) {
       closeLinkContainer();
     }
