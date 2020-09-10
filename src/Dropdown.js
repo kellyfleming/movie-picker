@@ -3,7 +3,6 @@ import {Link, useLocation} from "react-router-dom";
 import {toggleLinkContainer, closeLinkContainer} from "./utility";
 import {v4 as uuidv4} from "uuid";
 import "./Dropdown.css";
-import "./utility.css";
 
 function Dropdown(props) {
     let {keys, filmData, randomPath} = props;
@@ -26,14 +25,14 @@ function Dropdown(props) {
             return (
                 <span id="dropdownToggleText" onClick={toggleLinkContainer}>
                     Choose a film
-                    <span id="caret" className="fas fa-caret-down dropdown__button--caret"></span>
+                    <span id="caret" className="fas fa-caret-down button--caret"></span>
                 </span>
             );
         } else {
             return (
                 <span id="dropdownToggleText" onClick={toggleLinkContainer}>
                     {filmData[key].title}
-                    <span id="caret" className="fas fa-caret-down dropdown__button--caret"></span>
+                    <span id="caret" className="fas fa-caret-down button--caret"></span>
                 </span>
             );
         }
@@ -42,9 +41,9 @@ function Dropdown(props) {
     return (
         <div className="dropdown--sizing">
             <div className="flex-row">
-                <Link to="/about" className="dropdown__button dropdown__button--shrink dropdown__button--subdued">About</Link>
-                <button id="dropdownToggle" className="dropdown__button dropdown__button--grow dropdown__button--bright" onClick={toggleLinkContainer}>{getCurrent()}</button>
-                <Link className="dropdown__button dropdown__button--shrink dropdown__button--subdued" to={randomPath} onClick={closeLinkContainer}>Random</Link>
+                <Link to="/about" className="button button--shrink button--default">About</Link>
+                <button id="dropdownToggle" className="button button--grow button--primary" onClick={toggleLinkContainer}>{getCurrent()}</button>
+                <Link className="button button--shrink button--default" to={randomPath} onClick={closeLinkContainer}>Random</Link>
             </div>
             <ul className="link-container__list dropdown--hidden">
                 {getLinks()}
