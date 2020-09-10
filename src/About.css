@@ -17,3 +17,24 @@
 .about--border-bottom {
     border-bottom: dashed 1px greenyellow;
 }
+
+@media screen and (max-width: 1024px) {
+    .about {
+        width: 75%;
+        line-height: 1.75;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about {
+        width: 85%;
+        line-height: 1.5;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .about {
+        width: 95%;
+        line-height: 1.25;
+    }
+}
