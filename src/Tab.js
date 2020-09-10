@@ -9,13 +9,13 @@ function Tab(props) {
 
     function renderInfo() {
         return data.map((d, i) => (
-            <span className="Content-item" onClick={toggleIsRole} key={uuidv4()}>
+            <span className="grid__item" onClick={toggleIsRole} key={uuidv4()}>
                 {isRole ? <span>{d.role}</span> : <span>{d.name}</span>}
             </span>
         ));
     }
     return (
-        <div className="Content-grid">
+        <div className="grid">
             {renderInfo()}
         </div>
     );
