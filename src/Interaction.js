@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from "react";
 import StarRating from "./StarRating";
 import "./Interaction.css";
-import "./utility.css";
 import {getLocal, setLocal, initStorage, toggle} from "./utility";
 
 function Interaction(props) {
