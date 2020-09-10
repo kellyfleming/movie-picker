@@ -1,11 +1,11 @@
-.StarHalf svg {
+.star-half__svg {
     width: 0.85rem;
 }
 
-.StarHalf-flipped {
+.star-half--flipped {
     transform: scaleX(-1);
 }
 
-.StarHalf:hover {
+.star-half:hover {
     cursor: pointer;
 }
