@@ -1,9 +1,10 @@
 import React from "react";
 import "./Error.css";
+import "./utility.css";
 
 function Error() {
     return (
-        <div className="error">
+        <div className="error flex-col">
             <h1>Oops, sorry, couldn't find that.</h1>
             <p>Select a film from the dropdown above or click random for a surprise!</p>
         </div>
