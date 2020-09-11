@@ -1,5 +1,5 @@
-.interaction--wrapper {
-    justify-content: space-around;
+.controls--spacing {
+    justify-content: space-evenly;
     height: 100%;
 }
 

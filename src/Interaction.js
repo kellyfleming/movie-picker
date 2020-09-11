@@ -54,7 +54,7 @@ function Interaction(props) {
     }
 
     return (
-        <div className="interaction--wrapper flex-col">
+        <div className="controls--spacing flex-col">
             <div className="interaction--toggles flex-row">
                 <div className="icon--container flex-col" onClick={handleSeen}>
                     <span id="eye" className={seenToggleClasses}></span>
