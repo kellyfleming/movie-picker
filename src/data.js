@@ -69,7 +69,7 @@ export default {
         director: "Greta Gerwig",
         posterSrc: littleWomenPoster,
         headerSrc: littleWomenHeader,
-        tagline: "Own your story",
+        tagline: "Own your story.",
         synopsis: "Four sisters come of age in America in the aftermath of the Civil War",
         cast: [
             {name: "Saoirse Ronan", role: "Josephine \"Jo\" March"},
