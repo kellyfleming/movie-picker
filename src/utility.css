@@ -12,6 +12,19 @@
     text-transform: uppercase;
 }
 
+.text-serif {
+    font-family: serif;
+}
+
+.text-xlarge {
+    font-size: x-large;
+}
+
+.text-large {
+    font-size: large;
+    margin-top: 1.75rem;
+}
+
 .button {
     font-size: large;
     outline: none;

@@ -30,9 +30,9 @@ function Film(props) {
                 </div>
                 <div className="flex-col information--spacing">
                     <div className="flex-row title--spacing">
-                        <h1 className="">{title}</h1>
-                        <p className="title__p--alignment">{year}</p>
-                        <p className="title__p--alignment">Directed by {director}</p>
+                        <p className="text-serif text-xlarge">{title}</p>
+                        <p className="text-large">{year}</p>
+                        <p className="text-large">Directed by {director}</p>
                     </div>
                     <div className="information-text--sizing">
                         <p className="text-uppercase">{tagline}</p>
